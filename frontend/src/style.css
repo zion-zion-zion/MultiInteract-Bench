@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 让背景变白，方便截图 */
+body {
+  margin: 0;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  padding-top: 50px;
+}
