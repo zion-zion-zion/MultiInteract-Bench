@@ -87,7 +87,7 @@ def calculate_metrics(all_data):
             model_data[model]['valid'].append(metadata)
     
     # 找到所有模型中的最大任务数量作为基准
-    max_count = max(len(groups['all']) for groups in model_data.values())
+    max_count = max((len(groups['all']) for groups in model_data.values()), default=0)
     print(f"基准数量（最大任务数）: {max_count}")
     
     # 计算平均值

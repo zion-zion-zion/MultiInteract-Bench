@@ -1535,7 +1535,7 @@ def metrics_phase(args):
         if is_valid_sequence(metadata):
             model_data[model]['valid'].append(metadata)
     
-    max_count = max(len(groups['all']) for groups in model_data.values())
+    max_count = max((len(groups['all']) for groups in model_data.values()), default=0)
     print(f"Baseline count: {max_count}")
     
     # 计算平均值
